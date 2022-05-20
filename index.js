@@ -18,22 +18,19 @@ const h1 = () => {
   return new Promise(resolve => {
     h_left.style.width = '50px'
     h_left.style.height = '100px'
-    h_left.style.backgroundColor = 'black'
+    h_left.style.backgroundColor = 'red'
     h_left.style.borderRadius = '25px 25px 0 0'
-    h_left.style.transform = 'rotate(-45deg)'
+    h_left.style.transform = 'rotate(-45deg) translateX(9px)'
     setTimeout(() => resolve(), 800)
   })
 }
 
 const h2 = () => {
-  return new Promise(resolve => {
     h_right.style.width = '50px'
     h_right.style.height = '100px'
-    h_right.style.backgroundColor = 'black'
+    h_right.style.backgroundColor = 'red'
     h_right.style.borderRadius = '25px 25px 0 0'
-    h_right.style.transform = 'rotate(45deg)'
-    setTimeout(() => resolve(), 800)
-  })
+    h_right.style.transform = 'rotate(45deg) translateX(-9px)'
 }
 
 button.addEventListener('click', async () => {

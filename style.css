@@ -66,4 +66,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: scaleAnim .6s infinite;
+}
+
+@keyframes scaleAnim  {
+  50%{
+    transform: scale(1.2);
+  }
 }

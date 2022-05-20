@@ -1,0 +1,69 @@
+* {
+  transition: .5s;
+}
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: #6cb3a9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hide {
+  display: none;
+}
+.main {
+  margin-top: -5%;
+  width: 200px;
+  height: 100%;
+  position: relative;
+}
+.main .ball-top,
+.main .ball-bottom {
+  width: 200px;
+  height: 100px;
+  position: relative;
+  margin: 15px 0;
+}
+.main .ball-top {
+  /* background-color: #D25B70; */
+  background-color: black;
+  border-radius: 100px 100px 0 0;
+}
+.main .ball-bottom {
+  background-color: #ffffff;
+  border-radius: 0 0 100px 100px;
+}
+.main .ball-top.opened {
+  transform: translateY(-20px);
+}
+.main .ball-bottom.opened {
+  transform: translateY(20px);
+}
+.main .ball-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: #F6DF96;
+  border-radius: 50%;
+  border: 10px solid #781728;
+  cursor: pointer;
+}
+.main.shake {
+  animation: shake .8s;
+}
+@keyframes shake { /* 水平抖动，核心代码 */
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(+2px, 0, 0); }
+  30%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(+4px, 0, 0); }
+  50% { transform: translate3d(-4px, 0, 0); }
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
